@@ -223,3 +223,8 @@ img {
   display: flex;
   gap: 12px;
 }
+
+.footer__description,
+.footer__developer {
+  margin-bottom: 3px;
+}
