@@ -6,7 +6,143 @@
   src: url('../fonts/inter-v13-cyrillic_latin-regular.woff2') format('woff2');
 }
 
-body {
-  background-color: #7f02fd;
+html {
+  box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background-color: #fff;
+  font-size: 20px;
+  line-height: 1.24;
+  color: #1d1c1d;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1392px;
+  margin: 0 auto;
+  padding: 0 46px;
+}
+
+.header {
+  padding: 24px 0;
+}
+
+.header__container {
+  border-radius: 6px;
+  backdrop-filter: blur(60px);
+  background: rgba(108, 185, 171, 0.7);
+}
+
+.flex__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu {
+  gap: 50px;
+}
+
+.header__cart-link {
+  width: 28px;
+  height: 28px;
+  font-size: 12px;
+  color: #640996;
+  background-image: url("../image/bag.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 10px 4px 3px;
+}
+
+.promo {
+  background-color: #6cb9ab;
+  color: #fff;
+}
+
+.promo__container {
+  padding-top: 210px;
+  padding-bottom: 80px;
+  background-image: url("../image/promo-bg.png");
+  background-repeat: no-repeat;
+  background-position: right 113px bottom 0;
+}
+
+.promo__title {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 1.1;
+  max-width: 800px;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.promo__link {
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 16px 24px;
+
+}
+
+.products {
+  padding: 100px 0;
+}
+
+.products__title {
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 1.1;
+  color: #64099b;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product {
+  font-size: 0;
+  background: #f2f9f7;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product__image {
+  width: 100%;
+}
+
+.product__title,
+.product__price {
+  font-size: 24px;
+  line-height: 1.24;
+  color: #1d1c1d;
+}
