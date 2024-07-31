@@ -28,8 +28,8 @@ export const Footer = () => {
         <p className="footer__copyright">@CUPTIME, 2024</p>
         <p className="footer__description">Проект сделан в учебных целях</p>
         <ul className="footer__developer">
-          <li className="footer__developer">Designer:<a className="footer__developer-link" href="#"></a>Anastasia Ilian</li>
-          <li className="footer__developer">Developer:<a className="footer__developer-link" href="#"></a>Maksim Leskin</li>
+          <li className="footer__developer">Designer: <a className="footer__developer-link" href="#"></a>Anastasia Ilian</li>
+          <li className="footer__developer">Developer: <a className="footer__developer-link" href="#"></a>Maksim Leskin</li>
         </ul>
       </div>
 

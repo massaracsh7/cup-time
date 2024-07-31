@@ -26,6 +26,7 @@ export const Header = () => {
           </ul>
         </nav>
         <a className="header__cart-link" href="cart.html">6</a>
+        <div className="burger"><span className="burger__line"></span></div>
       </div>
     </header>
   )
