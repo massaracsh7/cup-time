@@ -102,6 +102,14 @@ img {
   gap: 50px;
 }
 
+.header__menu-link {
+  color: #fff;
+}
+
+.header__menu-link.active {
+  color: #640996;
+}
+
 .header__cart-link {
   width: 28px;
   height: 28px;
