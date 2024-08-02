@@ -470,6 +470,90 @@ img {
   margin-bottom: 3px;
 }
 
+.modal__wrapper {
+  display: flex;
+  background-color: #f2f9f7;
+  border-radius: 6px;
+  position: relative;
+}
+
+.modal__close {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  top: 25px;
+  right: 25px;
+}
+
+.modal__img {
+  width: 336px;
+  border-radius: 6px 0 0 6px;
+}
+
+.modal__info {
+  padding: 40px 24px 24px 24px;
+  width: 408px;
+}
+
+.modal__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.24;
+  color: #1d1c1d;
+  margin-bottom: 12px;
+}
+
+.modal__price {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.24;
+  color: #1d1c1d;
+  margin-bottom: 52px;
+}
+
+.modal__list {
+  margin-bottom: 52px;
+}
+
+.modal__add {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.24;
+  color: #1d1c1d;
+  margin-bottom: 6px;
+}
+
+.modal__add span {
+  color: #b8b8b8;
+}
+
+.modal__add:last-child {
+  margin-bottom: 0;
+}
+
+.modal__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal__quantity {
+  padding: 9px 0;
+}
+
+.modal__btn {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.24;
+  color: #64099b;
+  border: 1px solid #64099b;
+  border-radius: 4px;
+  padding: 16px 24px;
+}
+
 @media (max-width: 1240px) {
   .container {
     padding: 0 42px;
@@ -523,6 +607,42 @@ img {
 
   .footer__menu {
     gap: 32px;
+  }
+
+  .modal__img {
+    width: 224px;
+  }
+
+  .modal__info {
+    padding: 24px;
+    width: 300px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+  }
+
+  .modal__price {
+    margin-bottom: 31px;
+  }
+
+  .modal__list {
+    margin-bottom: 31px;
+  }
+
+  .modal__add {
+    font-size: 12px;
+  }
+
+  .modal__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal__btn {
+    font-size: 16px;
+    padding: 12px 18px;
   }
 
 }
@@ -685,6 +805,22 @@ img {
     margin-bottom: 12px;
   }
 
+  .modal__wrapper {
+    flex-direction: column;
+  }
+
+  .modal__img {
+    width: 290px;
+  }
+
+  .modal__info {
+    width: 290px;
+    padding: 16px;
+  }
+
+  .modal__list {
+    margin-bottom: 17px;
+  }
 }
 
 @media (max-width: 680px) {
