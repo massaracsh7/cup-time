@@ -1,11 +1,13 @@
+import { useCart } from "../context/CartContext";
 import { products } from "../products"
 import { CartItem } from "./CartItem"
 
 export const Cart = () => {
+  const { cart } = useCart();
   return (
     <section className="cart">
       <div className="container cart__container ">
-        <h2 className="cart__title">Корзина <span className="cart__title-num">6</span></h2>
+        <h2 className="cart__title">Корзина <span className="cart__title-num">{cart.length}</span></h2>
         <ul className="cart__list">
           {products.map((item) => (
             <CartItem key={item.id} data={item} />
