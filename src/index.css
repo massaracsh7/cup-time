@@ -470,11 +470,38 @@ img {
   margin-bottom: 3px;
 }
 
+.modal-cart {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .modal__wrapper {
   display: flex;
   background-color: #f2f9f7;
   border-radius: 6px;
   position: relative;
+}
+
+.modal-cart__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #f2f9f7;
+  border-radius: 6px;
+  text-align: center;
+}
+
+
+.modal-cart__btn {
+  border-radius: 6px;
+  color: #fff;
+  background-color: #640996;
+  padding: 10px 20px;
+  margin-top: 10px;
 }
 
 .modal__close {

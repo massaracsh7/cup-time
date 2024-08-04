@@ -5,14 +5,17 @@ import './index.css'
 import { ProductProvider } from './context/ProductContext.jsx'
 import { CartProvider } from './context/CartContext.jsx'
 import Modal from 'react-modal';
+import { OrderProvider } from './context/OrderContext.jsx'
 
-Modal.setAppElement('#root'); 
+Modal.setAppElement('#root');
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ProductProvider>
       <CartProvider>
-        <App />
+        <OrderProvider>
+          <App />
+        </OrderProvider>
       </CartProvider>
     </ProductProvider>
   </React.StrictMode>,
