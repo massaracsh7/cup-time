@@ -72,6 +72,10 @@ img {
   height: auto;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -120,6 +124,10 @@ img {
   background-repeat: no-repeat;
   text-align: center;
   padding: 10px 4px 3px;
+}
+
+.header__close-btn {
+  display: none;
 }
 
 .burger {
@@ -873,9 +881,8 @@ img {
     padding: 0 16px;
   }
 
-  .header__menu-link {
-    font-size: 0;
-
+  .header__nav {
+    display: none;
   }
 
   .header__cart-link {
@@ -884,6 +891,30 @@ img {
 
   .burger {
     display: block;
+  }
+
+  .header__nav.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    height: 100vh;
+    background-color: #6cb9ab;
+    z-index: 10;
+  }
+
+  .header__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
   }
 
   .promo__title {
