@@ -4,6 +4,9 @@ import App from './App.jsx'
 import './index.css'
 import { ProductProvider } from './context/ProductContext.jsx'
 import { CartProvider } from './context/CartContext.jsx'
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root'); 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

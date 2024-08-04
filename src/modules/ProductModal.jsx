@@ -32,7 +32,6 @@ export const ProductModal = ({ isOpen, onRequestClose, data }) => {
 
   const handleAddToCart = () => {
     addToCart(data, quantity);
-    console.log(data);
     onRequestClose();
   };
 
@@ -55,7 +54,7 @@ export const ProductModal = ({ isOpen, onRequestClose, data }) => {
           <div className="modal__bottom flex__container">
             <div className="cart-item__quantity modal__quantity">
               <button className="cart-item__quantity-button cart-item__quantity-button_minus" onClick={handleDecrease}>-</button>
-              <input className="cart-item__quantity-input" type='number' value={quantity} />
+              <input className="cart-item__quantity-input" type='number' value={quantity} readOnly/>
               <button className="cart-item__quantity-button cart-item__quantity-button_plus" onClick={handleIncrease}>+</button>
             </div>
             <button className="modal__btn" onClick={handleAddToCart}>Добавить</button>
