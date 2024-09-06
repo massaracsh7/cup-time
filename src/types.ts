@@ -1,8 +1,13 @@
 export interface Product {
   id: number;
-  name: string;
+  title: string;
+  img: string;
   price: number;
-  category: string;
+  additional: AdditionalInfo;
+}
+
+export interface AdditionalInfo {
+  [key: string]: string;
 }
 
 export interface OrderItem {

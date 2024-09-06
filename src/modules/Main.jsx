@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { Products } from "./Products";
+import { Products } from "./Products/Products";
 import { Promo } from "./Promo/Promo";
 import { Cart } from "./Cart";
 import { Order } from "./Order";
