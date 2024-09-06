@@ -1,0 +1,43 @@
+.footer {
+  padding: 60px 0;
+  background: $bg;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.24;
+  color: $white;
+
+
+  &__container {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    margin-bottom: 17px;
+  }
+
+  &__menu {
+    gap: 50px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.24;
+    color: $white;
+  }
+
+  &__email {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__description,
+  &__developer {
+    margin-bottom: 3px;
+  }
+}

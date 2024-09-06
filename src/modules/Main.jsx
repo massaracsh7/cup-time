@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Products } from "./Products";
-import { Promo } from "./Promo";
+import { Promo } from "./Promo/Promo";
 import { Cart } from "./Cart";
 import { Order } from "./Order";
 

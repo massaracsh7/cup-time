@@ -1,0 +1,28 @@
+$green: #607900;
+$orange: #d17d2f;
+$white: #fff;
+$light-orange: #f0a35b;
+$footer: #e9ece0;
+
+$white: #fff;
+$dark: #1d1c1d;
+$bg: #6cb9ab;
+$purple: #640996;
+$light-grey: #d9d9d9;
+$font-family: "Inter", sans-serif;
+
+
+
+%btn-placeholder {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: lighten(#607900, 10%);
+  }
+
+  &:active {
+    transform: scale(0.95);
+    background-color: darken(#d17d2f, 10%);
+  }
+}
