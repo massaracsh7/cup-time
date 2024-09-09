@@ -1,5 +1,5 @@
-@use "scss/variables";
-@use "scss/media";
+@use "@scss/varibles" as *;
+@use "@scss/media" as *;
 
 .skeleton_wrapper {
   width: 100%;

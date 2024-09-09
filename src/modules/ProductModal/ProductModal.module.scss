@@ -1,3 +1,6 @@
+@use "@scss/varibles" as *;
+@use "@scss/media" as *;
+
 .modal-cart {
   position: fixed;
   inset: 0;

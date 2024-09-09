@@ -1,0 +1,93 @@
+@use "@scss/varibles" as *;
+@use "@scss/media" as *;
+
+.cart {
+  padding: 215px 0 50px;
+
+
+  &__container {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px 20px;
+  }
+
+  &__title {
+    margin: 0;
+    grid-column: 1 / -1;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 1.1;
+    color: #64099b;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  &__summary {
+    display: grid;
+    grid-template-areas:
+      "title button"
+      "total button";
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 24px;
+    background-color: #f2f9f7;
+    color: #1d1c1d;
+  }
+
+  &__summary_title {
+    grid-area: title;
+    font-size: 20px;
+    font-weight: 400;
+    color: $dark;
+  }
+
+  &__total {
+    grid-area: total;
+    text-align: right;
+    color: $dark;
+    margin: 0;
+  }
+
+  &__button {
+    grid-area: button;
+    border: 1px solid $purple;
+    border-radius: 4px;
+    padding: 16px 24px;
+    color: $purple;
+    background-color: transparent;
+  }
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: $light;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+
+  &__btn {
+    border-radius: 6px;
+    color: #fff;
+    background-color: $purple;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+}

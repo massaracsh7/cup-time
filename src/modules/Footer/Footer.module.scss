@@ -1,3 +1,6 @@
+@use "@scss/varibles" as *;
+@use "@scss/media" as *;
+
 .footer {
   padding: 60px 0;
   background: $bg;

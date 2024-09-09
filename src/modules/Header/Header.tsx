@@ -37,12 +37,12 @@ export const Header: React.FC = () => {
 
   return (
     <header className={style.header}>
-      <div className="flex__container">
+      <div className="flex_container">
         <Link to="/" className={style.header__logo_link}>
           <img src="image/logo.svg" alt="Логотип Cup Time" className={style.header__logo} />
         </Link>
         <nav className={`${style.header__nav} ${isOpenMenu ? style.active : ''}`}>
-          <ul className={`${style.header__menu} flex_container}`}>
+          <ul className={`${style.header__menu} flex_container`}>
             {categories.map((category) => (
               <li key={category} className={style.header__menu_item}>
                 <Link

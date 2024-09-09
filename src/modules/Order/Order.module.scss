@@ -1,0 +1,74 @@
+@use "@scss/varibles" as *;
+@use "@scss/media" as *;
+
+.order {
+  padding: 50px 0 100px;
+
+
+  &__title {
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 1.1;
+    color: $purple;
+    margin-bottom: 32px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 640px;
+  }
+
+  &__input {
+    border-radius: 4px;
+    padding: 10px 16px;
+    background-color: $light;
+    font-size: 16px;
+    line-height: 1.24;
+    border: none;
+  }
+
+  &__input::placeholder {
+    color: $grey;
+  }
+
+  &__input_address {
+    grid-column: 1 / -1;
+  }
+
+  &__payment {
+    margin: 0;
+    padding: 12px 0 0;
+    border: none;
+
+    &_title {
+      display: block;
+      margin: 0;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    &_label {
+      display: block;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.24;
+      color: $dark;
+      margin-bottom: 8px;
+    }
+
+    &_label:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+
+  &__radio {
+    margin-right: 8px;
+  }
+
+
+
+}

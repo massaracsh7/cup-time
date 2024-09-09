@@ -9,7 +9,7 @@ interface OrderDetails {
 
 interface OrderContextType {
   orderDetails: OrderDetails;
-  updateOrderDetails: (field: keyof OrderDetails, value: string) => void;
+  updateOrderDetails: (field: string, value: string) => void;
   clearOrderDetails: () => void;
 }
 
@@ -27,7 +27,7 @@ export const OrderProvider: React.FC<OrderProviderProps> = ({ children }) => {
     payment: "cash",
   });
 
-  const updateOrderDetails = (field: keyof OrderDetails, value: string) => {
+  const updateOrderDetails = (field: string, value: string) => {
     setOrderDetails((prevDetails) => ({
       ...prevDetails,
       [field]: value,
