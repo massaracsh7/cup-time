@@ -1,0 +1,137 @@
+@use "@scss/varibles" as *;
+@use "@scss/media" as *;
+
+.header {
+  padding: 0 46px;
+  border-radius: 6px;
+  background-color: $bg;
+  position: absolute;
+  top: 24px;
+  max-width: 1392px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include laptop {
+    padding: 0 20px;
+    top: 40px;
+  }
+
+  @include mobile {
+    top: 8px;
+    padding: 0 16px;
+  }
+
+  &__menu {
+    gap: 50px;
+
+    @include tablet {
+      gap: 24px;
+    }
+  }
+
+  &__menu_item {
+    @extend %link-placeholder;
+  }
+
+  &__menu_link {
+    color: $white;
+    @extend %link-placeholder;
+
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__menu_link.active {
+    color: $purple;
+  }
+
+  &__nav {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__nav.active {
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      overflow: hidden;
+      inset: 0;
+      height: 100vh;
+      background-color: #6cb9ab;
+      z-index: 10;
+    }
+  }
+
+  &__cart_link {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    color: $purple;
+    background-image: url("../image/bag.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 10px 4px 3px;
+    @extend %link-placeholder;
+
+    @include mobile {
+      margin-left: auto;
+    }
+  }
+
+  &__close_btn {
+    display: none;
+    @extend %link-placeholder;
+
+    @include mobile {
+      position: absolute;
+      top: 20px;
+      right: 16px;
+      display: block;
+      width: 28px;
+      height: 28px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  &__logo {
+    @extend %link-placeholder;
+
+    @include tablet {
+      width: 78px;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  min-width: 20px;
+  height: 11px;
+  border-top: 1px solid $light-grey;
+  border-bottom: 1px solid $light-grey;
+  position: relative;
+  margin-left: 16px;
+  @extend %box-placeholder;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background-color: $light-grey;
+    width: 100%;
+    height: 1px;
+    top: 4px;
+    right: 0;
+  }
+
+  @include mobile {
+    display: block;
+  }
+}

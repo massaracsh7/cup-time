@@ -1,1 +1,0 @@
-export const API_URL = "https://cup-time-api-ww8l.onrender.com";

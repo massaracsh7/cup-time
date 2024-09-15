@@ -1,0 +1,55 @@
+$white: #fff;
+$dark: #1d1c1d;
+$bg: #6cb9ab;
+$light: #f2f9f7;
+$purple: #640996;
+$light-grey: #d9d9d9;
+$grey: #b8b8b8;
+$font-family: "Inter", sans-serif;
+
+
+
+%btn-placeholder {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: lighten(#640996, 10%);
+    color: #fff;
+  }
+
+  &:active {
+    transform: scale(0.95);
+    background-color: darken(#6cb9ab, 10%);
+  }
+}
+
+%link-placeholder {
+  transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+
+  &:hover {
+    color: lighten(#640996, 10%);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px); 
+  }
+
+  &:active {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    transform: translateY(0); 
+  }
+}
+
+%box-placeholder {
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: $purple;
+  }
+
+  &:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+}

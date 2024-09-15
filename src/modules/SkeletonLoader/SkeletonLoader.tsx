@@ -1,11 +1,17 @@
+import React from 'react';
 import ContentLoader from 'react-content-loader';
+import style from './SkeletonLoader.module.scss'; 
 
-export const SkeletonLoader = ({ count = 6 }) => (
+interface SkeletonLoaderProps {
+  count?: number; 
+}
+
+export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ count = 6 }) => (
   <>
     {Array(count)
-      .fill()
+      .fill(0)
       .map((_, index) => (
-        <div key={index} className="skeleton-wrapper">
+        <div key={index} className={style.skeleton_wrapper}>
           <ContentLoader
             speed={2}
             viewBox="0 0 420 600"

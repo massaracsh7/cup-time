@@ -1,0 +1,196 @@
+@use "@scss/varibles" as *;
+@use "@scss/media" as *;
+
+.modal-cart {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: $light;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+
+  &__btn {
+    border-radius: 6px;
+    color: #fff;
+    background-color: $purple;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+}
+
+.modal {
+  &__wrapper {
+    display: flex;
+    background-color: $light;
+    border-radius: 6px;
+    position: relative;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__close {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    top: 25px;
+    right: 25px;
+  }
+
+  &__img {
+    width: 336px;
+    border-radius: 6px 0 0 6px;
+
+    @include laptop {
+      width: 224px;
+    }
+
+    @include tablet {
+      width: 290px;
+    }
+  }
+
+  &__info {
+    padding: 40px 24px 24px 24px;
+    width: 408px;
+
+    @include laptop {
+      padding: 24px;
+      width: 300px;
+    }
+
+    @include tablet {
+      width: 290px;
+      padding: 16px;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.24;
+    color: #1d1c1d;
+    margin-bottom: 12px;
+
+    @include laptop {
+      font-size: 20px;
+    }
+  }
+
+  &__price {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.24;
+    color: $dark;
+    margin-bottom: 52px;
+
+    @include laptop {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 52px;
+
+    @include laptop {
+      margin-bottom: 31px;
+    }
+
+    @include tablet {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__add {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.24;
+    color: $dark;
+    margin-bottom: 6px;
+
+    @include laptop {
+      font-size: 12px;
+    }
+  }
+
+  &__add span {
+    color: $grey;
+  }
+
+  &__add:last-child {
+    margin-bottom: 0;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__quantity {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 9px 0;
+
+    &_button {
+      background-color: transparent;
+      border-radius: 4px;
+      border: 1px solid $grey;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: center;
+      @extend %btn-placeholder;
+    }
+
+    &_minus {
+      background-image: url("../image/minus.svg");
+    }
+
+    &_plus {
+      background-image: url("../image/plus.svg");
+    }
+
+    &_input {
+      width: 26px;
+      font-size: 20px;
+      text-align: center;
+      background-color: transparent;
+      outline: none;
+      border: none;
+    }
+  }
+
+  &__btn {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.24;
+    color: $purple;
+    border: 1px solid $purple;
+    border-radius: 4px;
+    padding: 16px 24px;
+    @extend %btn-placeholder;
+
+    @include laptop {
+      font-size: 16px;
+      padding: 12px 18px;
+    }
+  }
+}
