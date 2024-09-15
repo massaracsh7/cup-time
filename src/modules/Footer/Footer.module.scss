@@ -9,12 +9,20 @@
   line-height: 1.24;
   color: $white;
 
+  @include tablet {
+    padding: 40px 0;
+  }
 
   &__container {
     display: grid;
     gap: 25px;
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
+
+    @include mobile {
+      grid-template-columns: repeat(1, max-content);
+      gap: 40px;
+    }
   }
 
   &__copyright {
@@ -27,20 +35,57 @@
     font-size: 20px;
     line-height: 1.24;
     color: $white;
+
+    @include laptop {
+      gap: 32px;
+    }
+
+    @include tablet {
+      gap: 24px;
+      font-size: 16px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &_link {
+      @extend %link-placeholder;
+    }
   }
 
   &__email {
     display: block;
     margin-bottom: 16px;
+
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
   }
 
   &__social {
     display: flex;
     gap: 12px;
+    &_item {
+      @extend %link-placeholder;
+    }
   }
 
   &__description,
   &__developer {
     margin-bottom: 3px;
+  }
+
+  &__info {
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+      grid-row-start: 4;
+    }
   }
 }

@@ -1,9 +1,3 @@
-$green: #607900;
-$orange: #d17d2f;
-$white: #fff;
-$light-orange: #f0a35b;
-$footer: #e9ece0;
-
 $white: #fff;
 $dark: #1d1c1d;
 $bg: #6cb9ab;
@@ -20,11 +14,42 @@ $font-family: "Inter", sans-serif;
 
   &:hover {
     transform: scale(1.05);
-    background-color: lighten(#607900, 10%);
+    background-color: lighten(#640996, 10%);
+    color: #fff;
   }
 
   &:active {
     transform: scale(0.95);
-    background-color: darken(#d17d2f, 10%);
+    background-color: darken(#6cb9ab, 10%);
+  }
+}
+
+%link-placeholder {
+  transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+
+  &:hover {
+    color: lighten(#640996, 10%);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px); 
+  }
+
+  &:active {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    transform: translateY(0); 
+  }
+}
+
+%box-placeholder {
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: $purple;
+  }
+
+  &:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   }
 }

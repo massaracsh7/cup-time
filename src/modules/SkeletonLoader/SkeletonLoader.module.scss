@@ -4,4 +4,10 @@
 .skeleton_wrapper {
   width: 100%;
   height: 600px;
+  @include laptop {
+    height: 450px;
+  }
+  @include tablet {
+    height: 360px;
+  }
 }

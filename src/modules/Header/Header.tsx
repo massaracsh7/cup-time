@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
 
   const getActiveClass = (category: string): string => {
     const currentCategory = new URLSearchParams(location.search).get('category');
-    return currentCategory === category ? 'active' : "";
+    return currentCategory === category ? style.active : "";
   };
 
   return (

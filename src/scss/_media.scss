@@ -1,6 +1,6 @@
-$laptop: 1024px;
-$tablet: 768px;
-$mobile: 520px;
+$laptop: 1240px;
+$tablet: 940px;
+$mobile: 680px;
 
 @mixin laptop {
   @media (max-width: $laptop) {

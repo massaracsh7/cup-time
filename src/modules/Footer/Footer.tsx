@@ -33,7 +33,6 @@ export const Footer: React.FC = () => {
           <p className={style.footer__description}>Проект сделан в учебных целях</p>
           <ul className={style.footer__developerList}>
             <li className={style.footer__developer}>Designer: <a className={style.footer__developerLink} href="#">Anastasia Ilian</a></li>
-            <li className={style.footer__developer}>Developer: <a className={style.footer__developerLink} href="#">Maksim Leskin</a></li>
           </ul>
         </div>
 

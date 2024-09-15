@@ -82,6 +82,13 @@ body.no-scroll {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 50px;
+
+  @include laptop {
+    padding: 0 42px;
+  }
+  @include tablet {
+    padding: 0 16px;
+  }
 }
 
 .flex_container {

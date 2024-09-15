@@ -4,12 +4,38 @@
 .cart {
   padding: 215px 0 50px;
 
+  @include laptop {
+    padding: 170px 0 50px;
+  }
+
+  @include tablet {
+    padding: 139px 0 30px;
+  }
+
+  @include mobile {
+    padding: 100px 0 30px;
+  }
 
   &__container {
     display: grid;
     align-items: start;
     grid-template-columns: 2fr 1fr;
     gap: 32px 20px;
+
+    @include laptop {
+      grid-template-columns: 1fr 300px;
+    }
+
+    @include tablet {
+      gap: 0;
+      grid-template-columns: 1fr;
+    }
+
+    @include mobile {
+      display: grid;
+      align-items: start;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title {
@@ -18,13 +44,38 @@
     font-weight: 400;
     font-size: 54px;
     line-height: 1.1;
-    color: #64099b;
+    color: $purple;
+
+    @include tablet {
+      order: 2;
+      margin-bottom: 24px;
+      font-size: 36px;
+    }
+
+    @include mobile {
+      font-size: 36px;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+
+    @include laptop {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    @include tablet {
+      order: 3;
+      grid-template-columns: repeat(auto-fill, minmax(159px, 1fr));
+    }
+
+    @include mobile {
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 8px;
+    }
   }
 
   &__summary {
@@ -36,8 +87,25 @@
     align-items: center;
     gap: 8px;
     padding: 24px;
-    background-color: #f2f9f7;
-    color: #1d1c1d;
+    background-color: $light;
+    color: $dark;
+
+    @include tablet {
+      order: 1;
+      margin-bottom: 40px;
+      grid-template-areas: "title total button";
+      grid-template-columns: min-content 1fr min-content;
+      gap: 6px;
+    }
+
+    @include mobile {
+      grid-column: 1 / -1;
+      margin-bottom: 30px;
+      justify-content: space-between;
+      grid-template-areas:
+        "title button"
+        "total button";
+    }
   }
 
   &__summary_title {
@@ -45,6 +113,14 @@
     font-size: 20px;
     font-weight: 400;
     color: $dark;
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 1px;
+    }
   }
 
   &__total {
@@ -52,6 +128,14 @@
     text-align: right;
     color: $dark;
     margin: 0;
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__button {
@@ -61,6 +145,16 @@
     padding: 16px 24px;
     color: $purple;
     background-color: transparent;
+    @extend %btn-placeholder;
+
+    @include tablet {
+      padding: 12px 18px;
+      font-size: 16px;
+    }
+
+    @include mobile {
+      justify-self: end;
+    }
   }
 }
 
@@ -85,9 +179,10 @@
 
   &__btn {
     border-radius: 6px;
-    color: #fff;
+    color: $white;
     background-color: $purple;
     padding: 10px 20px;
     margin-top: 10px;
+    @extend %btn-placeholder;
   }
 }

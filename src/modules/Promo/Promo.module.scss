@@ -5,13 +5,34 @@
   background-color: $bg;
   color: $white;
 
-
   &__container {
     padding-top: 200px;
     padding-bottom: 75px;
     background-image: url("../image/promo-bg.png");
     background-repeat: no-repeat;
     background-position: right 113px bottom 0;
+
+    @include laptop {
+      padding-top: 172px;
+      padding-bottom: 60px;
+      background-image: url("../image/promo-bg-1024.png");
+      background-position: right 48px bottom 0;
+    }
+
+    @include tablet {
+      padding-top: 157px;
+      background-size: 203px;
+      background-position: right bottom;
+    }
+
+    @include mobile {
+      padding-top: 90px;
+      padding-bottom: 249px;
+      background-image: url("../image/promo-bg-680.png");
+      background-size: 145px;
+      background-repeat: no-repeat;
+      background-position: center bottom 0;
+    }
   }
 
   &__title {
@@ -22,6 +43,22 @@
     max-width: 800px;
     margin-top: 0;
     margin-bottom: 60px;
+
+    @include laptop {
+      font-size: 70px;
+      max-width: 620px;
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      font-size: 54px;
+      max-width: 460px;
+    }
+
+    @include mobile {
+      font-size: 40px;
+      line-height: 1.1;
+    }
   }
 
   &__link {
@@ -29,6 +66,15 @@
     border: 1px solid $white;
     border-radius: 4px;
     padding: 16px 24px;
+    @extend %btn-placeholder;
 
+    @include tablet {
+      padding: 12px 18px;
+      font-size: 16px;
+    }
+
+    @include mobile {
+      padding: 12px 18px;
+    }
   }
 }

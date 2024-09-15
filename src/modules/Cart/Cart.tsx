@@ -71,7 +71,7 @@ export const Cart = () => {
 
   return (
     <section className={style.cart}>
-      <div className={style.cart__container}>
+      <div className={`${style.cart__container} container`}>
         <h2 className={style.cart__title}>
           Корзина <span className={style.cart__title_num}>{cart ? cart.length : 0}</span>
         </h2>
