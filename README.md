@@ -4,7 +4,26 @@
 
 ## About The Project
 
+![Screen ](public/screen.png)
+
 Cup Time is a cozy online shop offering a carefully curated selection of teas, coffees, Turkish coffee pots, teapots, and more. We aim to bring the finest flavors and brewing essentials to your home, providing an easy and enjoyable shopping experience.
+
+***************************
+
+## Deploy ##
+
+* [https://cup-time-five.vercel.app](https://cup-time-five.vercel.app)
+
+***************************
+
+## Product Loading
+
+Products may take some time to load as data is being fetched from an external API. Please wait a few seconds while the information is being updated.
+
+## Data Source
+Products are loaded from an external API (https://cup-time-api-ww8l.onrender.com).
+
+***************************
 
 ## Built With
 
